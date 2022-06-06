@@ -1,11 +1,14 @@
 let showWelcome = 1;
 let showCookies = 1;
-let showThanks = 1;
+let showThanks = 0;
+let showThanksTrigger = 50;
 
 
 $(document).ready(function (){
     drawKeyboard();
     showCustomPopup('welcome-popup', 'Welcome', 'Спасибо что посетили наш сайт');
+
+    showCookiesPopup();
 });
 
 
@@ -14,6 +17,14 @@ function showCookiesPopup() {
         showCustomPopup('cookies-popup', 'Cookies', 'Мы используем cookies :)');
     }
     showCookies -= 1;
+}
+
+
+function showThanksPopup() {
+    if (showThanks % showThanksTrigger == 0) {
+        showCustomPopup('thanks-popup', 'Thanks', 'Спасибо, что используете наш сайт :)');
+    }
+    showThanks += 1;
 }
 
 
