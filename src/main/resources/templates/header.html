@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/header.js}"></script>
+    <link th:href="@{/css/header.css}" rel="stylesheet" />
+</head>
+
+<header class="header">
+    <ul>
+        <li class="logo">
+            <a th:href="@{/home}">
+                <img class="logo" th:src="@{/img/icon.svg}" alt="NoteSaver">
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/home}">
+                Главная
+            </a>
+        </li>
+    </ul>
+</header>
+
+</html>

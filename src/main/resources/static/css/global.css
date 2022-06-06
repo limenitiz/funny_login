@@ -1,0 +1,34 @@
+:root {
+    --header-height: 50px;
+    --header-logo-height: var(--header-height);
+    --footer-height: 50px;
+    --display-height: calc(
+        100vh
+        - var(--footer-height)
+        - 5px
+    );
+}
+
+body {
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 24px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Steinbeck, sans-serif;
+    font-weight: 400;
+    margin: 0
+}
+
+a {
+    color: lightslategray;
+    display: inline;
+    text-decoration: none
+}
+
+a:hover {
+    color: violet;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>NoteSaver</title>
+  <link th:href="@{/css/home.css}" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="header" th:include="header"></div>
+
+  <div class="display">
+    <div class="content">
+      <div class="links">
+        <p style="padding-left: 40px; font-size: 30px">
+          NoteSaver v2
+        </p>
+        <ul>
+          <li><a th:href="@{/login}">
+            Login
+          </a></li>
+          <li><a href="http://localhost:8080/swagger-ui/index.html">
+            API (Swagger)
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer" th:include="footer"></div>
+</body>
+
+</html>

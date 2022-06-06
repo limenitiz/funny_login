@@ -1,0 +1,40 @@
+@import url(./global.css);
+
+.display {
+    min-height: var(--display-height);
+}
+
+.content {
+    height: var(--display-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content li {
+    margin-left: 60px;
+    margin-top: 10px;
+    list-style-type: '⚡  ';
+}
+
+.links {
+    text-align: left;
+}
+
+label {
+    display: block;
+}
+
+button {
+    height: 30px;
+    width: 200px;
+}
+
+table td {
+    padding-left: 25px;
+}
+
+input[type='text'], input[type='password'] {
+    width: 200px;
+}
+

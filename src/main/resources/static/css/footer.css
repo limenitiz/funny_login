@@ -1,0 +1,9 @@
+@import url(./global.css);
+
+.footer {
+    background: lightpink;
+    min-height: var(--footer-height);
+    padding: 5px 0 0 60px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 -7px 29px 0;
+}
+

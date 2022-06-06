@@ -1,0 +1,22 @@
+@import url(./global.css);
+
+.display {
+    min-height: var(--display-height);
+}
+
+.content {
+    height: var(--display-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content li {
+    margin-left: 60px;
+    margin-top: 10px;
+    list-style-type: '⚡  ';
+}
+
+.links {
+    text-align: left;
+}

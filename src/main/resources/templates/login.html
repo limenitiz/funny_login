@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NoteSaver</title>
+    <link th:href="@{/css/login.css}" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script th:src="@{js/login.js}"></script>
+    <script th:src="@{js/popup_windows.js}"></script>
+</head>
+
+<body>
+<div class="header" th:include="header"></div>
+
+<div class="display">
+    <div class="content">
+        <table
+            onfocus="showCookiesPopup()"
+            onmousemove="showCookiesPopup()"
+            border="1"
+            style="
+                margin-top: 100px;
+            "
+        >
+            <tr>
+                <td>
+                    Имя пользователя:
+                </td>
+                <td>
+                    <label>
+                        <input id="username" type="text" disabled>
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <input id="username-input"
+                               type="text"
+                               style="width: 20px;"
+                               disabled>
+                    </label>
+                </td>
+                <td>
+                    <button onclick="getNewRandSymbol()">Новый символ</button>
+                    <br>
+                    <button onclick="pushSymbol()">Ввести символ</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Телефон:
+                </td>
+                <td>
+                    <label>
+                        <input id="phone" type="text" value="8" disabled>
+                    </label>
+                </td>
+                <td colspan="2">
+                    <div id="keyboard"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Пароль:
+                </td>
+                <td>
+                    <label>
+                        <input id="password" type="password" disabled>
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <input id="password-input" type="color">
+                    </label>
+                </td>
+                <td>
+                    <button onclick="addPassword()">
+                        Добавить
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Подтверждение пароля:
+                </td>
+                <td>
+                    <label>
+                        <input id="password_confirm" type="password" disabled>
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <input id="confirm-password-input" type="color">
+                    </label>
+                </td>
+                <td>
+                    <button onclick="addPasswordConfirm()">
+                        Добавить
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <center>
+                        <span id="btSend"
+                        >
+                            <button
+                                onclick="sendUserData()"
+                                onmousemove="swapSendAndClearBt('send')"
+                            >
+                                Зарегистрироваться
+                            </button>
+                        </span>
+
+                        <span id="btClear"
+                             style="
+                                padding-left: 300px;
+                             "
+                        >
+                            <button
+                                    onclick="clearUserData()"
+                                    onmousemove="swapSendAndClearBt('clear')"
+                            >
+                                Отчистить
+                            </button>
+                        </span>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div th:include="popup_windows"></div>
+
+<div class="footer" th:include="footer"></div>
+</body>
+
+</html>
